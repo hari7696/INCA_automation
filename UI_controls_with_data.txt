@@ -1,0 +1,157 @@
+Control 1: Style = pushbutton, Text = Toggle all/free, Tag = 
+Control 2: Style = pushbutton, Text = Run, Tag = 
+Control 3: Style = popupmenu, Text = Edit flux parameters Edit pool parameters, Tag = 
+Control 4: Style = text, Text = Optimization results, Tag = 
+Control 5: Style = popupmenu, Text = All measurements MS G6P FBP 3PG PEP Pyruvate Lactate Glutamate Malate Glutamine Glutathione XU5P S7P E4P AMP, Tag = 
+Control 6: Style = popupmenu, Text = Cluster_two, Tag = 
+Control 7: Style = popupmenu, Text = All parameters Free parameters Exch flux Net flux Glucose_Import Unlabled_Glucose_Contribution HK_Hexokinase PGUM_Phosphoglucomutase net PGUM_Phosphoglucomutase exch PFK_Phosphofructokinase net PFK_Phosphofructokinase exch ALD_Aldolase-PGK_Phosphoglycerokinase net ALD_Aldolase-PGK_Phosphoglycerokinase exch TPI_Triosephosphate_Isomerase net TPI_Triosephosphate_Isomerase exch GA3PDH/PGK_Glyceraldehyde_3-Phosphate_Dehydrogenase-Phosphoglycerate_Kinase net GA3PDH/PGK_Glyceraldehyde_3-Phosphate_Dehydrogenase-Phosphoglycerate_Kinase exch PGYM-ENOL_Phosphoglyceromutase-Enolase net PGYM-ENOL_Phosphoglyceromutase-Enolase exch PK_Pyruvate_Kinase ALT_Alanine_Aminotransferase net ALT_Alanine_Aminotransferase exch LDH_Lactate_Dehydrogenase net LDH_Lactate_Dehydrogenase exch Lactate_Export Pyruvate_Import PC_Pyruvate_Carboxylase PEPCK_Phosphoenolpyruvate_Carboxykinase net PEPCK_Phosphoenolpyruvate_Carboxykinase exch MDH1_Malate_Dehydrogenase PDH_Pyruvate_Dehydrogenase CS_Citrate_Synthase ACO-IDH_Aconitase-Isocitrate_Dehydrogenase CIC_Mitochondrial_Citrate_Carrier aKGDH-SCS_aKetoglutarate_Dehydrogenase-Succinyl_CoA_Synthase GDH_Glutamate_Dehydrogenase net GDH_Glutamate_Dehydrogenase exch GS_Glutamine_Synthetase net GS_Glutamine_Synthetase exch Glutamine_Import Transaminase SDH_Succinate_Dehydrogenase net SDH_Succinate_Dehydrogenase exch FH_Fumarate_Hydratase net FH_Fumarate_Hydratase exch MDH2_Malate_Dehydrogenase net MDH2_Malate_Dehydrogenase exch Fatty_Acid_Import FAO_Fatty_Acid_Oxidation CO2_Import CO2_Export O2_Import O2_Export G6PD_Glucose_6_Phosphate_Dehydrogenase-6PGD_6_Phosphogluconate_Dehydrogenase R5PI_R5P_Isomerase net R5PI_R5P_Isomerase exch R5P3E_R5P_3_Epimerase net R5P3E_R5P_3_Epimerase exch Transketolase_1 net Transketolase_1 exch Transaldolase net Transaldolase exch Transketolase_2 net Transketolase_2 exch GCS_yGlutamylcysteine_Synthetase GTS_Glutathione_Synthetase PHGDH-PSP_3_Phosphoglycerate_Dehydrogenase-3-Phosphoserine_Phosphatase SHMT_Serine_Hydroxymethyltransferase net SHMT_Serine_Hydroxymethyltransferase exch FAC_Folic_Acid_Cycle net FAC_Folic_Acid_Cycle exch PPAT-GART1 GART2-GART3 PAICS1-ADSL net PAICS1-ADSL exch ATIC1-ADSL Methionine_Import MT_Methyl_Transferase CS_Cystathionine_Synthase CL_Cystathionine_Lyase CA_Carbonic_Anhydrase net CA_Carbonic_Anhydrase exch Glycine_Import Serine_Import Cysteine_Import GPDH - Glycerol-3-phosphate Dehydrogenase ME_Malic_Enzyme ATP Dephosphorylation Glutamate Import, Tag = 
+Control 8: Style = popupmenu, Text = Contribution Scaled covariance Correlation Scaled sensitivity Error sensitivity, Tag = 
+Control 9: Style = text, Text = Select matrix, Tag = 
+Control 10: Style = text, Text = Normal probability plot, Tag = 
+Control 11: Style = text, Text = Goodness of fit, Tag = 
+Control 12: Style = text, Text = Measurements, Tag = 
+Control 13: Style = text, Text = Confidence interval plot, Tag = 
+Control 14: Style = pushbutton, Text = Monte Carlo Analysis, Tag = 
+Control 15: Style = pushbutton, Text = Parameter Continuation, Tag = 
+Control 16: Style = pushbutton, Text = Update Model, Tag = 
+Control 17: Style = pushbutton, Text = Estimate Fluxes, Tag = 
+Control 18: Style = frame, Text = , Tag = 
+Control 19: Style = text, Text = Perform analysis, Tag = 
+Control 20: Style = edit, Text = The fit is accepted. However, the model may be overfitted.  SSR = 2.8 Expected SSR = [18.3 49.5] (95.0% conf., 32 DOF)  The residuals do not appear to be normally distributed. Weighted residuals mean ± standard deviation = -0.03 ± 0.18., Tag = 
+Control 21: Style = pushbutton, Text = Toggle all, Tag = 
+Control 22: Style = popupmenu, Text = View all fluxes View net fluxes View exchange fluxes View pool sizes View scaling factors, Tag = 
+Control 23: Style = popupmenu, Text = Not available, Tag = 
+Control 24: Style = text, Text = Select measurement, Tag = 
+Control 25: Style = popupmenu, Text = Not available, Tag = 
+Control 26: Style = text, Text = Select experiment, Tag = 
+Control 27: Style = popupmenu, Text = Not available, Tag = 
+Control 28: Style = text, Text = Select parameter, Tag = 
+Control 29: Style = popupmenu, Text = Contribution Scaled covariance Correlation Scaled sensitivity Error sensitivity, Tag = 
+Control 30: Style = text, Text = Select matrix, Tag = 
+Control 31: Style = checkbox, Text = Show average enrichment (MS), Tag = 
+Control 32: Style = checkbox, Text = Plot experiment data, Tag = 
+Control 33: Style = pushbutton, Text = Update Model, Tag = 
+Control 34: Style = pushbutton, Text = Simulate, Tag = 
+Control 35: Style = popupmenu, Text = Edit flux parameters Edit pool parameters, Tag = 
+Control 36: Style = popupmenu, Text = No results available, Tag = 
+Control 37: Style = listbox, Text = No results available, Tag = 
+Control 38: Style = popupmenu, Text = No results available, Tag = 
+Control 39: Style = frame, Text = , Tag = 
+Control 40: Style = text, Text = View simulation results, Tag = 
+Control 41: Style = edit, Text = , Tag = 
+Control 42: Style = pushbutton, Text = Update Model, Tag = 
+Control 43: Style = pushbutton, Text = Reset, Tag = 
+Control 44: Style = pushbutton, Text = Calculate, Tag = 
+Control 45: Style = popupmenu, Text = FBA MOMA FVA FCF Robustness analysis PhPP analysis, Tag = 
+Control 46: Style = frame, Text = , Tag = 
+Control 47: Style = text, Text = Perform analysis, Tag = 
+Control 48: Style = text, Text = Edit net flux parameters, Tag = 
+Control 49: Style = text, Text = View results, Tag = 
+Control 50: Style = pushbutton, Text = Edit, Tag = 
+Control 51: Style = pushbutton, Text = Delete, Tag = 
+Control 52: Style = pushbutton, Text = Down, Tag = 
+Control 53: Style = pushbutton, Text = Up, Tag = 
+Control 54: Style = pushbutton, Text = Copy, Tag = 
+Control 55: Style = pushbutton, Text = New, Tag = 
+Control 56: Style = pushbutton, Text = Delete, Tag = 
+Control 57: Style = pushbutton, Text = Down, Tag = 
+Control 58: Style = pushbutton, Text = Up, Tag = 
+Control 59: Style = pushbutton, Text = Copy, Tag = 
+Control 60: Style = pushbutton, Text = New, Tag = 
+Control 61: Style = pushbutton, Text = Delete, Tag = 
+Control 62: Style = pushbutton, Text = Down, Tag = 
+Control 63: Style = pushbutton, Text = Up, Tag = 
+Control 64: Style = pushbutton, Text = Copy, Tag = 
+Control 65: Style = pushbutton, Text = New, Tag = 
+Control 66: Style = pushbutton, Text = Delete, Tag = 
+Control 67: Style = pushbutton, Text = Down, Tag = 
+Control 68: Style = pushbutton, Text = Up, Tag = 
+Control 69: Style = pushbutton, Text = Copy, Tag = 
+Control 70: Style = pushbutton, Text = New, Tag = 
+Control 71: Style = popupmenu, Text = Edit MS/MS measurements, Tag = 
+Control 72: Style = popupmenu, Text = Edit NMR measurements, Tag = 
+Control 73: Style = popupmenu, Text = Edit MS measurements, Tag = 
+Control 74: Style = popupmenu, Text = Edit tracers, Tag = 
+Control 75: Style = text, Text = Edit pool size measurements, Tag = 
+Control 76: Style = text, Text = Edit net flux measurements, Tag = 
+Control 77: Style = pushbutton, Text = Import, Tag = 
+Control 78: Style = pushbutton, Text = Delete, Tag = 
+Control 79: Style = pushbutton, Text = Down, Tag = 
+Control 80: Style = pushbutton, Text = Up, Tag = 
+Control 81: Style = pushbutton, Text = Copy, Tag = 
+Control 82: Style = pushbutton, Text = New, Tag = 
+Control 83: Style = pushbutton, Text = Delete, Tag = 
+Control 84: Style = pushbutton, Text = Down, Tag = 
+Control 85: Style = pushbutton, Text = Up, Tag = 
+Control 86: Style = pushbutton, Text = Copy, Tag = 
+Control 87: Style = pushbutton, Text = New, Tag = 
+Control 88: Style = pushbutton, Text = Delete, Tag = 
+Control 89: Style = pushbutton, Text = Down, Tag = 
+Control 90: Style = pushbutton, Text = Up, Tag = 
+Control 91: Style = pushbutton, Text = Copy, Tag = 
+Control 92: Style = pushbutton, Text = New, Tag = 
+Control 93: Style = pushbutton, Text = Delete, Tag = 
+Control 94: Style = pushbutton, Text = Down, Tag = 
+Control 95: Style = pushbutton, Text = Up, Tag = 
+Control 96: Style = pushbutton, Text = Copy, Tag = 
+Control 97: Style = pushbutton, Text = New, Tag = 
+Control 98: Style = pushbutton, Text = Delete, Tag = 
+Control 99: Style = pushbutton, Text = Down, Tag = 
+Control 100: Style = pushbutton, Text = Up, Tag = 
+Control 101: Style = pushbutton, Text = Copy, Tag = 
+Control 102: Style = pushbutton, Text = New, Tag = 
+Control 103: Style = pushbutton, Text = Delete, Tag = 
+Control 104: Style = pushbutton, Text = Down, Tag = 
+Control 105: Style = pushbutton, Text = Up, Tag = 
+Control 106: Style = pushbutton, Text = Copy, Tag = 
+Control 107: Style = pushbutton, Text = New, Tag = 
+Control 108: Style = frame, Text = , Tag = 
+Control 109: Style = pushbutton, Text = Delete, Tag = 
+Control 110: Style = pushbutton, Text = Down, Tag = 
+Control 111: Style = pushbutton, Text = Up, Tag = 
+Control 112: Style = pushbutton, Text = Copy, Tag = 
+Control 113: Style = pushbutton, Text = New, Tag = 
+Control 114: Style = frame, Text = , Tag = 
+Control 115: Style = text, Text = Edit experiments, Tag = 
+Control 116: Style = pushbutton, Text = Delete, Tag = 
+Control 117: Style = pushbutton, Text = Down, Tag = 
+Control 118: Style = pushbutton, Text = Up, Tag = 
+Control 119: Style = pushbutton, Text = Copy, Tag = 
+Control 120: Style = pushbutton, Text = New, Tag = 
+Control 121: Style = text, Text = Edit equivalent atoms, Tag = 
+Control 122: Style = frame, Text = , Tag = 
+Control 123: Style = pushbutton, Text = Delete, Tag = 
+Control 124: Style = pushbutton, Text = Down, Tag = 
+Control 125: Style = pushbutton, Text = Up, Tag = 
+Control 126: Style = pushbutton, Text = Copy, Tag = 
+Control 127: Style = pushbutton, Text = New, Tag = 
+Control 128: Style = text, Text = Edit symmetric atoms, Tag = 
+Control 129: Style = frame, Text = , Tag = 
+Control 130: Style = text, Text = Edit atom properties, Tag = 
+Control 131: Style = text, Text = Select metabolite, Tag = 
+Control 132: Style = listbox, Text = 3PG 510FTHF AICAR AIR AMP ATP AcCoA Alanine CH2THF CH3 CO2 Citrate Cystathione Cysteine DHAP E4P F6P FBP Fumarate G3P G6P GA3P GAR Glucose Glutamate Glutamine Glutamylcysteine Glutathione Glycine HCO3 Homocysteine Lactate Malate Methionine O2 OAA PEP Palmitoylcarnitine Pyruvate R5P RB5P S7P Serine Succinate XU5P aKB a_ketoglutarate glycogen, Tag = 
+Control 133: Style = text, Text = Select compartment, Tag = 
+Control 134: Style = popupmenu, Text = All compartments cell in media out, Tag = 
+Control 135: Style = text, Text = Select type, Tag = 
+Control 136: Style = popupmenu, Text = All types Source Sink Internal, Tag = 
+Control 137: Style = text, Text = Edit pool properties, Tag = 
+Control 138: Style = text, Text = Edit flux properties of selected reactions, Tag = 
+Control 139: Style = pushbutton, Text = Delete, Tag = 
+Control 140: Style = pushbutton, Text = Down, Tag = 
+Control 141: Style = pushbutton, Text = Up, Tag = 
+Control 142: Style = pushbutton, Text = Copy, Tag = 
+Control 143: Style = frame, Text = , Tag = 
+Control 144: Style = text, Text = Modify selected reactions, Tag = 
+Control 145: Style = text, Text = View pathway, Tag = 
+Control 146: Style = pushbutton, Text = Select, Tag = 
+Control 147: Style = popupmenu, Text = All pathways Active pathways, Tag = 
+Control 148: Style = text, Text = Edit reaction properties, Tag = 
+Control 149: Style = text, Text = Enter network description, Tag = 
+Control 150: Style = edit, Text = , Tag = 
+Control 151: Style = checkbox, Text = Append reactions, Tag = 
+Control 152: Style = pushbutton, Text = Enter, Tag = 
+Control 153: Style = frame, Text = , Tag = 
+Control 154: Style = text, Text = Build network, Tag = 
+Control 155: Style = text, Text = Enter network reactions, Tag = 
+Control 156: Style = edit, Text = Glucose.media (abcdef) -> Glucose.cell (abcdef) glycogen (abcdef) -> Glucose.cell (abcdef) Glucose.cell (abcdef) -> G6P (abcdef) G6P (abcdef) <-> F6P (abcdef) F6P (abcdef) <-> FBP (abcdef) FBP (abcdef) <-> 3PG (cba) + 3PG (def) DHAP (abc) <-> GA3P (abc) GA3P (abc) <-> 3PG (abc) 3PG (abc) <-> PEP (abc) PEP (abc) -> Pyruvate (abc) Pyruvate (abc) <-> Alanine (abc) Alanine.media (abc) -> Alanine (abc) Pyruvate (abc) + 0.5*O2 <-> Lactate (abc) Lactate (abc) -> Lactate.media (abc) Pyruvate.media (abc) -> Pyruvate (abc) Pyruvate (abc) + CO2 (d) -> OAA (abcd) OAA (abcd) <-> PEP (abc) + CO2 (d) OAA.cell (abcd) -> Malate.cell (abcd) Pyruvate (abc) + 0.5*O2 -> AcCoA (bc) + CO2 (a) AcCoA (ef) + OAA (abcd) -> Citrate (dcbfea) Citrate (abcdef) + 0.5*O2 -> a_ketoglutarate (abcde) + CO2 (f) Citrate (abcdef) + Malate.cell (ghij) -> Citrate.cell (abcdef) + Malate (ghij) a_ketoglutarate (abcde) + 0.5*O2 -> Succinate (bcde) + CO2 (a) a_ketoglutarate (abcde) <-> Glutamate (abcde) Glutamate (abcde) <-> Glutamine (abcde) Glutamine.media (abcde) -> Glutamine (abcde) a_ketoglutarate.cell (abcde) -> Glutamate (abcde) a_ketoglutarate.cell (abcde) -> a_ketoglutarate.out (abcde) Succinate (abcd) + 0.5*O2 <-> Fumarate (abcd) Fumarate (abcd) <-> Malate (abcd) Malate (abcd) + 0.5*O2 <-> OAA (abcd) Glutamate.mito (abcde) -> Glutamate (abcde) Malate.media (abcd) -> Malate.cell (abcd) OAA (abcd) <-> Aspartate.mito (abcd) Aspartate.mito (abcd) + Glutamate (efghi) -> Aspartate (abcd) + Glutamate.mito (efghi) Aspartate (abcd) + Glutamine (efghi) -> Asparagine (abcd) + Glutamate (efghi) Aspartate (abcd) -> Aspartate.out (abcd) Aspartate (abcd) -> OAA.cell (abcd) Palmitoylcarnitine.media (abcdefghijklmnop) -> Palmitoylcarnitine (abcdefghijklmnop) Palmitoylcarnitine (abcdefghijklmnop) + 7*O2 -> AcCoA (ab) + AcCoA (cd) + AcCoA (ef) + AcCoA (gh) + AcCoA (ij) + AcCoA (kl) + AcCoA (mn) + AcCoA (op) CO2.in (a) -> CO2 (a) CO2 (a) -> CO2.out (a) O2.in -> O2 O2 -> O2.out G6P (abcdef) -> 6PG (abcdef) G6P (abcdef) + O2 -> RB5P (bcdef) + CO2 (a) RB5P (abcde) <-> R5P (abcde) RB5P (abcde) <-> XU5P (abcde) R5P (abcde) + XU5P (fghij) <-> GA3P (fgh) + S7P (abcdeij) GA3P (abc) + S7P (defghij) <-> E4P (defg) + F6P (abchij) E4P (abcd) + XU5P (efghi) <-> GA3P (efg) + F6P (abcdhi) F6P (abcdef) <-> GA3P (def) + EC3 (abc) S7P (abcdefg) <-> E4P (defg) + EC3 (abc) Glutamate (abcde) + Cysteine (fgh) -> Glutamylcysteine (abcdefgh) Glutamylcysteine (abcdefgh) + Glycine (ij) -> Glutathione (abcdefghij) 3PG (abc) -> Serine (abc) Serine (abc) <-> Glycine (ab) + CH2THF (c) CH2THF (a) <-> 510FTHF (a) R5P (abcde) + Glycine (fg) -> GAR (abcdefg) GAR (abcdefg) + 510FTHF (h) -> AIR (abcdefgh) AIR (abcdefgh) + HCO3 (i) <-> AICAR (abcdefghi) AICAR (abcdefghi) + 510FTHF (j) -> AMP (abcdefghij) Methionine.media (abcde) -> Methionine (abcde) 510FTHF (a) + Homocysteine (bcde) -> Methionine (bcdea) Aspartate (abcd) + 510FTHF (e) + O2 -> Methionine (abcde) Methionine (abcde) -> Homocysteine (abcd) + CH3 (e) CH3 (a) -> CH3.out (a) Homocysteine (abcd) + Serine (efg) -> Cystathione (abcdgfe) Cystathione (abcdefg) -> Cysteine (gfe) + aKB (abcd) CO2 (a) <-> HCO3 (a) Glycine.media (ab) -> Glycine (ab) Serine.media (abc) -> Serine (abc) Lactate.media (abc) -> Lactate (abc) Pyruvate.out (abc) -> Pyruvate (abc) Carb (abcdef) -> Glucose.cell (abcdef) Glutamate.media (abcde) -> Glutamate (abcde) Glutathione (abcdefghij) -> Glutamate (abcde) + Cysteine (fgh) + Glycine (ij) Cysteine.media (abc) -> Cysteine (abc) DHAP (abc) + 0.5*O2 -> G3P (abc) Malate.cell (abcd) -> Pyruvate (abc) + CO2 (d) ATP (abcdefghij) -> AMP (abcdefghij) Glutamate.media (abcde) -> Glutamate (abcde) XU5P.media (abcde) -> XU5P (abcde), Tag = 
+>> 

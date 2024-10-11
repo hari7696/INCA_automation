@@ -1,0 +1,28 @@
+buttons = findall(figs, 'Type', 'UIControl');
+
+callbackFunction = estimate_button.Callback;
+callbackFunction(estimate_button, []);
+
+
+tables = findall(figs, 'Type', 'uitable');
+
+#view all the table columns names
+
+textControls = findall(figs, 'Type', 'uicontrol', 'Style', 'text');
+
+for i = 1:length(tables)
+    if ~isempty(tables(i).ColumnName)
+        disp(['Table ', num2str(i), ': Column Names = ', strjoin(tables(i).ColumnName, ', ')]);
+    else
+        disp(['Table ', num2str(i), ': No column names set.']);
+    end
+
+    for i = 1:length(textControls)
+        textContent = get(textControls(i), 'String');
+        position = get(textControls(i), 'Position');  % Get position of text control
+        visibility = get(textControls(i), 'Visible');  % Check if the control is visible
+        selectedText = get(selectedTextControl, 'String');
+
+        fprintf('Text Control %d: %s, Position: %s, Visible: %s\n', i, textContent, mat2str(position), visibility, selectedText);
+    end
+    

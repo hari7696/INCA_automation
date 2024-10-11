@@ -1,0 +1,32 @@
+Text Control 1: Optimization results, Position: [0.55 0.901 0.2 0.05], Visible: off
+Text Control 2: Select matrix, Position: [0.05 0.901 0.15 0.05], Visible: off
+Text Control 3: Normal probability plot, Position: [0.7 0.426 0.2 0.05], Visible: off
+Text Control 4: Goodness of fit, Position: [0.05 0.426 0.2 0.05], Visible: off
+Text Control 5: Measurements, Position: [0.05 0.901 0.2 0.05], Visible: off
+Text Control 6: Confidence interval plot, Position: [0.575 0.426 0.2 0.05], Visible: on
+Text Control 7: Perform analysis, Position: [0.05 0.426 0.3 0.05], Visible: on
+Text Control 8: Select measurement, Position: [0.65 0.901 0.15 0.05], Visible: off
+Text Control 9: Select experiment, Position: [0.45 0.901 0.15 0.05], Visible: off
+Text Control 10: Select parameter, Position: [0.25 0.901 0.15 0.05], Visible: off
+Text Control 11: Select matrix, Position: [0.05 0.901 0.15 0.05], Visible: off
+Text Control 12: View simulation results, Position: [0.05 0.426 0.2 0.05], Visible: off
+Text Control 13: Perform analysis, Position: [0.05 0.426 0.2 0.05], Visible: off
+Text Control 14: Edit net flux parameters, Position: [0.05 0.901 0.2 0.05], Visible: off
+Text Control 15: View results, Position: [0.575 0.426 0.2 0.05], Visible: off
+Text Control 16: Edit pool size measurements, Position: [0.05 0.451 0.2 0.05], Visible: off
+Text Control 17: Edit net flux measurements, Position: [0.05 0.451 0.2 0.05], Visible: off
+Text Control 18: Edit experiments, Position: [0.05 0.901 0.45 0.05], Visible: off
+Text Control 19: Edit equivalent atoms, Position: [0.5 0.426 0.3 0.05], Visible: off
+Text Control 20: Edit symmetric atoms, Position: [0.5 0.901 0.3 0.05], Visible: off
+Text Control 21: Edit atom properties, Position: [0.25 0.901 0.2 0.05], Visible: off
+Text Control 22: Select metabolite, Position: [0.05 0.901 0.15 0.05], Visible: off
+Text Control 23: Select compartment, Position: [0.55 0.101 0.4 0.05], Visible: off
+Text Control 24: Select type, Position: [0.05 0.101 0.4 0.05], Visible: off
+Text Control 25: Edit pool properties, Position: [0.05 0.901 0.5 0.05], Visible: off
+Text Control 26: Edit flux properties of selected reactions, Position: [0.05 0.301 0.5 0.05], Visible: off
+Text Control 27: Modify selected reactions, Position: [0.6 0.151 0.35 0.05], Visible: off
+Text Control 28: View pathway, Position: [0.6 0.301 0.35 0.05], Visible: off
+Text Control 29: Edit reaction properties, Position: [0.05 0.901 0.5 0.05], Visible: off
+Text Control 30: Enter network description, Position: [0.05 0.151 0.5 0.05], Visible: off
+Text Control 31: Build network, Position: [0.65 0.151 0.3 0.05], Visible: off
+Text Control 32: Enter network reactions, Position: [0.05 0.901 0.5 0.05], Visible: off
