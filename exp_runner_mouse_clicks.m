@@ -14,47 +14,56 @@ exp_table_data = exp_table.Data;
 % iterating over the experiments present in the table
 num_flux_estimate_clicks = 3;
 
-for exp = 1:size(exp_table_data, 1)
+for exp = 1: 7%size(exp_table_data, 1)
 
-    % for sanity reason, unchecking all the exps, just to make sure or if the user interupts the UI
-    for i = 1:size(exp_table_data, 1)
-        exp_table_data{i, 4} = false;
-    end
-    
-    % updating the table data
-    exp_table_data{exp, 4} = true;  % 4th column is the active checkbox column
-    exp_table.Data = exp_table_data;
+    % have to resort to manual click, as Its nearly impossible to figure out the input of the celleditcallback of the table
+    robot.mouseMove(xPosition, yPosition);  
+    robot.delay(300)
+    robot.mousePress(InputEvent.BUTTON1_MASK);
+    robot.delay(300);  % Delay to ensure the click is registered
+    robot.mouseRelease(InputEvent.BUTTON1_MASK);
+    robot.delay(200);
+    pause(0.5)
 
-
-    % clicking on updating the data #update model data button is 16th button # all the buttons are listed in UI controls text file
-    % the button wont be available for the first run
-
-    fprintf("beginning the experiment")
+    fprintf("beginning the experiment %s\n", exp_table_data{exp, 2})
     % once the exp box is checked, we need to run the experiment
     for iters = 1:num_flux_estimate_clicks
+
 
         % estimated fluxes button is 17th button . #all the buttons are listed in UI controls text file
         estimated_fluxes_button = buttons(17);
         callbackFunction = estimated_fluxes_button.Callback;
         callbackFunction(estimated_fluxes_button, []);
-        
-        fprintf("calling update button")
-        pause(20);
+        pause(5);
 
-        figs = findall(groot, 'Type', 'Figure');
-        tables = findall(figs, 'Type', 'uitable');
-        buttons = findall(figs, 'Type', 'UIControl');
-        % clicking on updating the data #update model data button is 16th button # all the buttons are listed in UI controls text file
+
         update_model_button = buttons(16);
         callbackFunction2 = update_model_button.Callback;
         callbackFunction2(update_model_button, []);
-        fprintf("update button clicked")
-        % exp_table_data{exp, 4} = true;  % 4th column is the active checkbox column
-        % exp_table.Data = exp_table_data;
-        % pause(20);
 
-
+        pause(2);
     end
+
+                % have to resort to manual click, as Its nearly impossible to figure out the input of the celleditcallback of the table
+    robot.mouseMove(xPosition, yPosition);  
+    robot.delay(300)
+    robot.mousePress(InputEvent.BUTTON1_MASK);
+    robot.delay(300);  % Delay to ensure the click is registered
+    robot.mouseRelease(InputEvent.BUTTON1_MASK);
+    robot.delay(200);
+    pause(0.5)
+    
+    % Down button
+    x_down = 904;
+    y_down = 399;
+    % Move the mouse and click
+    robot.mouseMove(x_down, y_down);
+    robot.delay(200);
+    robot.mousePress(InputEvent.BUTTON1_MASK);
+    robot.delay(200);  % Delay to ensure the click is registered
+    robot.mouseRelease(InputEvent.BUTTON1_MASK);
+    robot.delay(100);
+
 
     fprintf("experiment done")
 

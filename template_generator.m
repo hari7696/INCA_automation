@@ -100,6 +100,7 @@ arr_compounds = unique(data.compound_name, 'stable');
 exp_objs = struct;
 exp_objs.exps_lst = [];
 for i = 1:size(arr_exps)
+    disp("=====================")
     disp(i);
     exp_name = arr_exps{i};
     disp(exp_name);
@@ -150,11 +151,4 @@ end
 m = model(r, 'expts', exp_objs.exps_lst);
 filename = 'C:\Users\ghari\Documents\OPS\inca_wrapper\inca_custom\model_populated_dummy2.mat';
 save(filename, 'm');
-
-% temp_exp{'3PG'}.idvs = idv([[0.4536195536590997;0.0927661094865061;0.1087496473008118;0.3448646895535824]], 'id', {'Cluster_one_3PG_0_0_1'}, 'std', [[0.4315082981995422;0.2534677478392348;0.2696680136264026;0.4153306633901068]], 'time', [0.0])
-
-
-% ms_Cluster_one{'3PG'}.idvs = idv([[0.4536195536590997;0.0927661094865061;0.1087496473008118;0.3448646895535824]], 'id', {'Cluster_one_3PG_0_0_1'}, 'std', [[0.4315082981995422;0.2534677478392348;0.2696680136264026;0.4153306633901068]], 'time', [0.0])
-
-
 
