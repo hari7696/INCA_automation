@@ -5,6 +5,7 @@ buttons = findall(figs, 'Type', 'UIControl');
 
 exp_table = tables(25);
 exp_table_data = exp_table.Data;
+exp_table_data
 
 % for sanity reason, unchecking all the exps, just to make sure or if the user interupts the UI
 for i = 1:size(exp_table_data, 1)
