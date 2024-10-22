@@ -16,18 +16,14 @@ exp_table = tables(25);
 exp_table_data = exp_table.Data;
 
 % iterating over the experiments present in the table
-num_flux_estimate_clicks = 3;             
+num_flux_estimate_clicks = 2;             
 pause(6)
-num_tabs = 3;
-tab_stroke(num_tabs, robot )
-space_stroke(robot)
-pause(0.5)
 
-for exp = 1: 16%size(exp_table_data, 1)
+for exp = 700: 704%size(exp_table_data, 1)
 
     % have to resort to manual click, as Its nearly impossible to figure out the input of the celleditcallback of the table
 
-    num_tabs = 4*exp;                                                                                                                            ;
+    % num_tabs = 4*exp;                                                                                                                            ;
     fprintf("beginning the experiment %s\n", exp_table_data{exp, 2})
 
     % sanity checks
@@ -63,7 +59,7 @@ for exp = 1: 16%size(exp_table_data, 1)
         estimated_fluxes_button = buttons(17);
         callbackFunction = estimated_fluxes_button.Callback;
         callbackFunction(estimated_fluxes_button, []);
-        pause(3);
+        pause(2);
 
 
         update_model_button = buttons(16);
@@ -79,10 +75,12 @@ for exp = 1: 16%size(exp_table_data, 1)
 
     % have to resort to manual click, as Its nearly impossible to figure out the input of the celleditcallback of the table
     % unchekcing
-    tab_stroke(num_tabs, robot )                            
+    tab_stroke(4, robot)
+
+    arrow_stroke(exp-1, robot )                            
     space_stroke(robot)
 
-    tab_stroke(4, robot )                            
+    arrow_stroke(1, robot )                            
     space_stroke(robot)
 
     % once experiment is done we need to save the metadata and the fluxes
@@ -105,16 +103,16 @@ for exp = 1: 16%size(exp_table_data, 1)
     fprintf(fit_info_file, '========================\n\n');
     fclose(fit_info_file);
     fprintf("=================\n")
-    pause(5);                                                                       
+    pause(2);                                                                       
 end
 
-function tab_stroke(n, robot)
+function arrow_stroke(n, robot)
     import java.awt.event.KeyEvent;
     for i=1:n
-        robot.keyPress(KeyEvent.VK_TAB);
-        robot.keyRelease(KeyEvent.VK_TAB);
+        robot.keyPress(KeyEvent.VK_DOWN);
+        robot.keyRelease(KeyEvent.VK_DOWN);
     end
-    pause(2)
+    pause(1)
 
 end
 
@@ -124,5 +122,16 @@ function space_stroke(robot)
     robot.delay(100);
     robot.keyRelease(KeyEvent.VK_SPACE);
     robot.delay(100);
-    pause(2)
+    pause(1)
+end
+
+function tab_stroke(n, robot)
+    import java.awt.event.KeyEvent;
+    for i=1:n
+        robot.keyPress(KeyEvent.VK_TAB);
+        robot.keyRelease(KeyEvent.VK_TAB);
+        robot.delay(50)
+    end
+
+
 end
