@@ -79,7 +79,7 @@ t_common.atoms.it(:,1) = [0.0,1.0];
 
 
 % Read the CSV file
-filename = "C:\Users\ghari\Documents\OPS\inca_wrapper\inca_custom\data_map\mat_format_fraction_data.csv"
+filename = "C:\Users\ghari\Documents\OPS\inca_wrapper\inca_custom\data_map\mat_data_bulk.csv";
 data = readtable(filename);
 
 % Display the first few rows of the table
@@ -149,6 +149,6 @@ end
 
 
 m = model(r, 'expts', exp_objs.exps_lst);
-filename = 'C:\Users\ghari\Documents\OPS\inca_wrapper\inca_custom\model_populated_dummy2.mat';
+filename = 'C:\Users\ghari\Documents\OPS\inca_wrapper\inca_custom\matlab_populated_bulk.mat';
 save(filename, 'm');
 

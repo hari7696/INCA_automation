@@ -1,36 +1,30 @@
 clc, clear;
-% finding all the tables
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-robot = Robot;
 
 start_time = datetime('now');
-
 figs = findall(groot, 'Type', 'Figure');
 tables = findall(figs, 'Type', 'uitable');
 buttons = findall(figs, 'Type', 'UIControl');
-% (Estimate Fluxes) , 
 
 % the tables and their field names are 
 % table 25 is the edit experiment tables
-
 exp_table = tables(25);
-exp_table_data = exp_table.Data;
 
 % iterating over the experiments present in the table
 num_flux_estimate_clicks = 3;             
-pause(6)
+pause(2)
 ssr_table = table();
 
-for exp = 1: 20%size(exp_table_data, 1)
-                                                                                                                        ;
-    fprintf("beginning the experiment %s\n", exp_table_data{exp, 2})
+for exp = 1: 20%size(exp_table.Data, 1)
 
-    % sanity checks
+    % Mock-up of the CellEditData structure
+    
+    fprintf("===================\n")                                                                                                 ;
+    fprintf("beginning the experiment %s\n", exp_table.Data{exp, 2})
     exp_table = tables(25);
-    exp_table_data = exp_table.Data;
+    exp_checkbox(exp_table, exp, true) 
+    drawnow;
     % checking how many boxes ticked in 4th column
-    num_boxes_ticked = sum(cell2mat(exp_table_data(:, 4)));
+    num_boxes_ticked = sum(cell2mat(exp_table.Data(:, 4)));
 
     % getting the experiment name from the table which is in 2nd column and 4th column needs to be checked
     % Filter rows where the 4th column equals true
@@ -46,7 +40,8 @@ for exp = 1: 20%size(exp_table_data, 1)
         break
     end
 
-    filtered_data = exp_table_data([exp_table_data{:,4}] == true, :);
+    temp_table_data = exp_table.Data;
+    filtered_data = temp_table_data([temp_table_data{:,4}] == true, :);
     exp_name_from_table = filtered_data(:, 2);
     exp_name_from_table = exp_name_from_table{1};
 
@@ -68,6 +63,7 @@ for exp = 1: 20%size(exp_table_data, 1)
         callbackFunction2 = update_model_button.Callback;
         callbackFunction2(update_model_button, []);
         pause(1);
+        drawnow;
 
         flux_table = tables(7);
         flux_table_data = flux_table.Data;
@@ -82,35 +78,18 @@ for exp = 1: 20%size(exp_table_data, 1)
     [smallest_ssr, index] = min(parsed_ssr);
     fprintf("ssr array is %s\n", mat2str(parsed_ssr))
     fprintf("Smallest SSR is %f at iteration %d\n", smallest_ssr, index);
-    disp(string(exp));
-    disp(string(exp_name_from_table));
-    disp(string(exp_table_data{exp, 2}));
-    disp(string(smallest_ssr));
-    disp(mat2str(parsed_ssr));
-    disp(string(index));
 
     parsed_ssr_string = strjoin(string(parsed_ssr), ',');
-    ssr_record = table(string(exp), string(exp_name_from_table), string(exp_table_data{exp, 2}), string(smallest_ssr), parsed_ssr_string, string(index) , 'VariableNames', {'exp_num', 'exp_name_from_table', 'exp_name_sanity_check', 'smallest_ssr', 'all_ssr', 'chosen_ssr'});
+    ssr_record = table(string(exp), string(exp_name_from_table), string(exp_table.Data{exp, 2}), string(smallest_ssr), parsed_ssr_string, string(index) , 'VariableNames', {'exp_num', 'exp_name_from_table', 'exp_name_sanity_check', 'smallest_ssr', 'all_ssr', 'chosen_ssr'});
     
     ssr_table = [ssr_table; ssr_record]; %#ok<AGROW>
-    % have to resort to manual click, as Its nearly impossible to figure out the input of the celleditcallback of the table
-    % unchekcing
-    tab_stroke(4, robot)
-
-    arrow_stroke(exp-1, robot )                            
-    space_stroke(robot)
-
-    arrow_stroke(1, robot )                            
-    space_stroke(robot)
-
-    % write this table data to a csv file
     writecell(flux_table_data_cellarray{index}, strcat('output/exp_num_', num2str(exp), '_exp_id_',(exp_name_from_table), '_fluxes.csv'));
 
     % write the fit information to a text file in append mode
     fit_info_file = fopen('fit_info.txt', 'a');
     fprintf(fit_info_file, '========================\n');
     fprintf(fit_info_file, 'Experiment num :: %d\n', exp);
-    fprintf(fit_info_file, 'Experiment ID ::  %s\n', exp_table_data{exp, 2});
+    fprintf(fit_info_file, 'Experiment ID ::  %s\n', exp_table.Data{exp, 2});
     textCells = ssr_data_cellarray{index};
     for line = 1:length(textCells)
         fprintf(fit_info_file, '%s\n', textCells{line});
@@ -118,43 +97,17 @@ for exp = 1: 20%size(exp_table_data, 1)
     fprintf(fit_info_file, '\n');
     fclose(fit_info_file);
     fprintf("=================\n")
-    % clear flux_table_data_cellarray;
-    % clear ssr_data_cellarray;
-    % clear parsed_ssr;
-    pause(1);
-    writetable(ssr_table, "ssr_stats.csv");                                                                 
+    writetable(ssr_table, "ssr_stats.csv");
+
+    exp_table = tables(25);
+    exp_checkbox(exp_table, exp, false)
+
 end
 
 end_time = datetime('now');
 fprintf("total time taken is %s\n", end_time - start_time)
 
-function arrow_stroke(n, robot)
-    import java.awt.event.KeyEvent;
-    for i=1:n
-        robot.keyPress(KeyEvent.VK_DOWN);
-        robot.keyRelease(KeyEvent.VK_DOWN);
-    end
-    pause(1)
 
-end
-
-function space_stroke(robot)
-    import java.awt.event.KeyEvent;
-    robot.keyPress(KeyEvent.VK_SPACE);
-    robot.delay(100);
-    robot.keyRelease(KeyEvent.VK_SPACE);
-    robot.delay(100);
-    pause(0.2)
-end
-
-function tab_stroke(n, robot)
-    import java.awt.event.KeyEvent;
-    for i=1:n
-        robot.keyPress(KeyEvent.VK_TAB);
-        robot.keyRelease(KeyEvent.VK_TAB);
-        robot.delay(20)
-    end
-end
 
 function p_ssr = parse_ssr(textcellsdata)
 
@@ -168,4 +121,26 @@ function p_ssr = parse_ssr(textcellsdata)
     numbers = regexp(currentLine, '\d+(\.\d+)?', 'match');
     p_ssr = str2double(numbers{1});
     % parsing the ssr data
+end
+
+function exp_checkbox(exp_table, exp, value)
+
+    event = struct;
+    event.Indices = [exp, 4];  % The original indices before sorting
+    event.DisplayIndices = [exp, 4];  % The indices as displayed, assuming no sorting
+    event.PreviousData = exp_table.Data(exp, 4);  % Capture previous data, assuming it exists
+    event.EditData = value;  % The user's input
+    event.NewData = value;  % What MATLAB will attempt to write to the Data array
+    event.Error = '';  % Start with no error
+    event.Source = exp_table;  % Component executing the callback
+    event.EventName = 'CellEdit';  % The type of event
+    exp_table.Data{exp, 4} = value;
+
+    % Check if the callback is set to a function handle before calling
+    if isa(exp_table.CellEditCallback, 'function_handle')
+        feval(exp_table.CellEditCallback, exp_table, event);
+    else
+        error('CellEditCallback is not set to a valid function handle.');
+    end
+
 end
